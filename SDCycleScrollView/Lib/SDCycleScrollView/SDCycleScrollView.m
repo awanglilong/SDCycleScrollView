@@ -273,6 +273,11 @@ NSString * const ID = @"SDCycleScrollViewCell";
     }
 }
 
+-(void)setBounces:(BOOL)bounces{
+    _bounces = bounces;
+    _mainView.bounces = _bounces;
+}
+
 - (void)setScrollDirection:(UICollectionViewScrollDirection)scrollDirection
 {
     _scrollDirection = scrollDirection;
@@ -428,6 +433,11 @@ NSString * const ID = @"SDCycleScrollViewCell";
     }
 }
 
+-(void)setIsCanScale:(BOOL)isCanScale
+{
+    _isCanScale = isCanScale;
+    [_mainView reloadData];
+}
 
 - (void)automaticScroll
 {
@@ -569,7 +579,9 @@ NSString * const ID = @"SDCycleScrollViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    
+    if ( [cell isKindOfClass:[SDCollectionViewCell class]]) {
+        cell.isCanScale = _isCanScale;
+    }
     long itemIndex = [self pageControlIndexWithCurrentCellIndex:indexPath.item];
     
     if ([self.delegate respondsToSelector:@selector(setupCustomCell:forIndex:cycleScrollView:)] &&
@@ -592,10 +604,10 @@ NSString * const ID = @"SDCycleScrollViewCell";
             if (!image) {
                 image = [UIImage imageWithContentsOfFile:imagePath];
             }
-            cell.imageView.image = image;
+            cell.image = image;
         }
     } else if (!self.onlyDisplayText && [imagePath isKindOfClass:[UIImage class]]) {
-        cell.imageView.image = (UIImage *)imagePath;
+        cell.image = (UIImage *)imagePath;
     }
     
     if (_titlesGroup.count && itemIndex < _titlesGroup.count) {

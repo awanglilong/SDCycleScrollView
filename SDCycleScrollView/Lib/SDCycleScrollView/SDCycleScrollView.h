@@ -123,6 +123,9 @@ typedef enum {
 /** 图片滚动方向，默认为水平滚动 */
 @property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 
+/** 是否可以滑动出界，默认YES（自己加） */
+@property (nonatomic, assign) BOOL bounces;
+
 @property (nonatomic, weak) id<SDCycleScrollViewDelegate> delegate;
 
 /** block方式监听点击 */
@@ -153,6 +156,9 @@ typedef enum {
 
 /** 只展示文字轮播 */
 @property (nonatomic, assign) BOOL onlyDisplayText;
+
+/** 是否可以缩放，默认NO（自己加的） */
+@property (assign, nonatomic) BOOL isCanScale;
 
 /** pagecontrol 样式，默认为动画样式 */
 @property (nonatomic, assign) SDCycleScrollViewPageContolStyle pageControlStyle;

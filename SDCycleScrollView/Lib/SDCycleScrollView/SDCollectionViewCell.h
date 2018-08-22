@@ -36,6 +36,8 @@
 
 @property (weak, nonatomic) UIImageView *imageView;
 @property (copy, nonatomic) NSString *title;
+@property (strong, nonatomic) UIImage *image;//添加
+@property (assign, nonatomic) BOOL isCanScale;//添加
 
 @property (nonatomic, strong) UIColor *titleLabelTextColor;
 @property (nonatomic, strong) UIFont *titleLabelTextFont;
