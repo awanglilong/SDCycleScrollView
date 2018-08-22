@@ -111,6 +111,9 @@
     if (self.onlyDisplayText) {
         _titleLabel.frame = self.bounds;
     } else {
+        [_imageScrollView setFrame: self.bounds];
+        _imageScrollView.contentSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
+        self.scaleImg.frame = self.bounds;
         _imageView.frame = self.bounds;
         CGFloat titleLabelW = self.sd_width;
         CGFloat titleLabelH = _titleLabelHeight;
