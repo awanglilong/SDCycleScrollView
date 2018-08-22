@@ -96,6 +96,8 @@ typedef enum {
 
 //////////////////////  数据源API //////////////////////
 
+@property (nonatomic, weak) UICollectionView *mainView; // 显示图片的collectionView
+
 /** 网络图片 url string 数组 */
 @property (nonatomic, strong) NSArray *imageURLStringsGroup;
 

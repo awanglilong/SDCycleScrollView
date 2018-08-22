@@ -122,18 +122,18 @@
 
 #pragma mark  ------------------缩放--------------------------
 #pragma mark -set与get
-//-(void)setIsCanScale:(BOOL)isCanScale
-//{
-//    _isCanScale = isCanScale;
-//    _imageScrollView.hidden = !isCanScale;
-//    
-//    if (_isCanScale) {
-//        _imageScrollView.maximumZoomScale = 2.0;
-//    }else{
-//        _imageScrollView.maximumZoomScale = 1.0;
-//    }
-//    
-//}
+-(void)setIsCanScale:(BOOL)isCanScale
+{
+    _isCanScale = isCanScale;
+    _imageScrollView.hidden = !isCanScale;
+    
+    if (_isCanScale) {
+        _imageScrollView.maximumZoomScale = 2.0;
+    }else{
+        _imageScrollView.maximumZoomScale = 1.0;
+    }
+    
+}
 
 - (void)setImage:(UIImage *)image{
     _image = image;
