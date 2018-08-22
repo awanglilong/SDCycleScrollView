@@ -1,18 +1,14 @@
-# SDCycleScrollView（新建QQ交流群：185534916、675995250）
-## ☆☆☆ “iOS图片、文字轮播器” ☆☆☆
+# SDCycleScrollView
+## iOS图片、文字轮播器
 
 ### 支持pod导入
 pod 'SDCycleScrollView','~> 1.75'
-
- 如果发现pod search SDCycleScrollView 搜索出来的不是最新版本，需要在终端执行cd转换文件路径命令退回到desktop，然后执行pod setup命令更新本地spec缓存（可能需要几分钟），然后再搜索就可以了
-
 
 ### 更改记录：
 
 2018.8.22 -- 添加多图片预览和缩放功能
 
-
-           
+   
 ### 无限循环自动图片轮播器(一步设置即可使用)
 
      // 网络加载图片的轮播器
