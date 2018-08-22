@@ -9,23 +9,8 @@ pod 'SDCycleScrollView','~> 1.75'
 
 ### 更改记录：
 
-2017.11.26 -- 增加滚动到指定index接口
+2018.8.22 -- 添加多图片预览和缩放功能
 
-2017.10.28 -- 更新对SDWebImage的版本依赖
-
-2017.06.23 -- 1.增加支持轮播自定义cell的代理方法 2.增加禁止拖动手势api
-
-2016.05.27 -- 新增纯文字轮播、增加viewController在来回push时候出现的图片卡在中间的解决方案“解决viewWillAppear时出现时轮播图卡在一半的问题，在控制器viewWillAppear时调用 adjustWhenControllerViewWillAppera”
-
-2016.04.21 -- 修复自定义图片的pagecontrol刷新图片数据时崩溃bug；设置单张图片时停止轮播
-
-2016.03.31 -- 增加垂直方向滚动功能
-
-2016.01.21 -- 修复加载时出现item size zero提示问题
-
-2016.01.15 -- 兼容assets存放的本地图片
-
-2016.01.06 -- 0.图片管理使用SDWebImage；1.优化内存，提升性能；2.添加图片contentmode接口；3.block监听点击接口；4.滚动到某张图片监听；5.增加自定义图片pageControl接口；6.其他等等。其中有一处接口改动：pagecontrol的小圆点自定义接口改为：currentPageDotColor、pageDotColor、currentPageDotImage、pageDotImage。
 
            
 ### 无限循环自动图片轮播器(一步设置即可使用)
@@ -56,6 +41,3 @@ pod 'SDCycleScrollView','~> 1.75'
  
  4. cycleScrollView.autoScrollTimeInterval = ;// 自定义轮播时间间隔 
 
-![](http://ww4.sinaimg.cn/bmiddle/9b8146edjw1esvytq7lwrg208p0fce82.gif)
-
-![](http://cdn.cocimg.com/bbs/attachment/Fid_19/19_441660_d01407e9c4b63d1.gif)
