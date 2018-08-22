@@ -129,7 +129,7 @@
 {
     _isCanScale = isCanScale;
     _imageScrollView.hidden = !isCanScale;
-    
+    _imageView.hidden = isCanScale;
     if (_isCanScale) {
         _imageScrollView.maximumZoomScale = 2.0;
     }else{
@@ -166,6 +166,7 @@
 - (UIImageView *)scaleImg{
     if (!_scaleImg) {
         _scaleImg = [[UIImageView alloc]init];
+        _scaleImg.contentMode =  UIViewContentModeScaleAspectFit;
     }
     return _scaleImg;
 }
